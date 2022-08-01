@@ -26,6 +26,16 @@ class ProductsStore{
         });
         this.push();
     }
+    create(name:string, count:number):void{
+        let product:Product = {
+            name,
+            count,
+            completed: false,
+            id: Date.now().toLocaleString()
+        };
+        this.products.push(product);
+        this.push();
+    }
     push():void{
         localStorage.setItem('products', JSON.stringify(this.products));
     }

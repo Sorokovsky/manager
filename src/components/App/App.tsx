@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import Container from '../Container/Container';
 import MyForm from '../MyForm/MyForm';
 import cl from './App.module.scss';
-const App:FC = observer(():JSX.Element => {
+const App:FC = ():JSX.Element => {
   return(
     <div className={[cl.app].join(" ")}>
       <Container>
@@ -11,5 +11,5 @@ const App:FC = observer(():JSX.Element => {
       </Container>
     </div>
   )
-})
+};
 export default App;

@@ -7,3 +7,4 @@ const MyForm:React.FC = ():JSX.Element => {
         </form>
     )
 }
+export default MyForm;

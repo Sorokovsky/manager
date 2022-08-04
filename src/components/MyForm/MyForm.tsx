@@ -26,6 +26,10 @@ const MyForm:React.FC = observer(():JSX.Element => {
             }
             return;
         }
+        if(count <= 0){
+            alert("Кількість продуктів має бути більше нуля");
+            return;
+        }
         products.create(name, count);
     }
     return(

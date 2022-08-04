@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-interface Product{
+export interface Product{
     name: string;
     count: number;
     id: string;
@@ -10,7 +10,7 @@ class ProductsStore{
     constructor(){
         makeAutoObservable(this);
     }
-    deleteAll():void{
+        deleteAll():void{
         this.products = [];
         this.push();
     }

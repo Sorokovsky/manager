@@ -4,12 +4,16 @@
     gap: 15px;
 }
 .item{
-    border: 1px solid #000;
+    border: 2px solid #000;
     padding: 15px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: .3s all linear;
+}
+.completedItem{
+    border-color: green;
 }
 .name{
     font-size: 20px;

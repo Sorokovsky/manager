@@ -25,7 +25,7 @@ const ProductsItem:React.FC<Props> = ({product}:Props):JSX.Element => {
         products.deleteOne(product.id);
     }
     return (
-        <div className={[cl.item].join(" ")}>
+        <div className={[cl.item, product.completed ? cl.completedItem : ""].join(" ")}>
             <p className={[cl.name].join(" ")}>{product.name} {product.count}.</p>
             <div className={[cl.tools].join(" ")}>
                 <div onClick={complete} className={[cl.complete, product.completed ? cl.completed : ""].join(" ")}></div>

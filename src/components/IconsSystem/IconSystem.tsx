@@ -8,7 +8,7 @@ interface Icon{
     top:string;
 }
 const IconsSystem:React.FC = ():JSX.Element => {
-    const [icons, setIcons] = React.useState<Icon[]>([
+    const [icons] = React.useState<Icon[]>([
         {
             image: tomato,
             left: '10%',
@@ -52,6 +52,7 @@ const IconsSystem:React.FC = ():JSX.Element => {
                         top: icon.top,
                         left: icon.left
                     }}
+                alt={icon.image}
                 className={[cl.icon].join(" ")}
                 key={icon.image}
                 />

@@ -15,7 +15,33 @@ class ProductsStore{
         this.push();
     }
     deleteOne(id:string):void{
-        this.products.filter(item => item.id !== id);
+        const products:Product[] = [];
+        this.products.forEach((item) => {
+            
+            if(item.id !== id){
+                products.push(item);
+            }
+        });
+        this.products = [...products];
+        this.push();
+    }
+    decremment(id:string):void{
+        this.products.forEach((item:Product) => {
+            if(item.id === id){
+                item.count -= 1;
+                if(item.count <= 0){
+                    this.deleteOne(item.id);
+                }
+            }
+        });
+        this.push();
+    }
+    incremment(id:string):void{
+        this.products.forEach((item:Product) => {
+            if(item.id === id){
+                item.count += 1;
+            }
+        });
         this.push();
     }
     complete(id:string):void{
@@ -37,6 +63,7 @@ class ProductsStore{
         this.push();
     }
     push():void{
+        this.products = [...this.products];
         localStorage.setItem('products', JSON.stringify(this.products));
     }
 }

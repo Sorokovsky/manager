@@ -2,6 +2,7 @@ import React from "react";
 import cl from './IconsSystem.module.scss';
 import tomato from '../../assets/tomato-svgrepo-com.svg';
 import apple from '../../assets/apple-svgrepo-com.svg';
+import cheese from "../../assets/cheese-svgrepo-com.svg";
 interface Icon{
     image:any;
     left:string;
@@ -38,6 +39,21 @@ const IconsSystem:React.FC = ():JSX.Element => {
             image: apple,
             left: '90%',
             top: '65%'
+        },
+        {
+            image: cheese,
+            left: '45%',
+            top: '85%'
+        },
+        {
+            image: cheese,
+            left: '25%',
+            top: '85%'
+        },
+        {
+            image: cheese,
+            left: '60%',
+            top: '90%'
         },
     ]);
     
